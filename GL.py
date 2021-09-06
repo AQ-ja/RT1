@@ -5,6 +5,8 @@ from obj import Obj
 
 import numpy as np
 
+import MylibMath as Mlib
+
 from numpy import sin, cos, tan
 
 import random
@@ -160,7 +162,7 @@ class Raytracer(object):
                 Py = 2 * ((y + 0.5) / self.height) - 1
 
                 # Angulo de vision, asumiendo que el near plane esta a 1 unidad de la camara
-                t = tan( (self.fov * np.pi / 180) / 2)
+                t = tan( (self.fov * 3.1416 / 180) / 2)
                 r = t * self.width / self.height
 
                 Px *= r

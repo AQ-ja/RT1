@@ -1,4 +1,5 @@
 import numpy as np
+import MylibMath as Mlib
 from GL import WHITE
 
 class Material(object):
@@ -20,10 +21,10 @@ class Sphere(object):
 
         # P = O + t * D
 
-        L = np.subtract(self.center, orig)
+        L = Mlib.sub(self.center, orig)
         l = np.linalg.norm(L)
 
-        tca = np.dot(L, dir)
+        tca = Mlib.punto(L, dir)
 
         d = (l**2 - tca**2) ** 0.5
 
